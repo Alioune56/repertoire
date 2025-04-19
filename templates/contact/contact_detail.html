@@ -1,0 +1,18 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<div class="d-flex justify-content-center align-items-center" style="height: 70vh;">
+  <div class="card text-center" style="width: 18rem;">
+    <div class="card-body">
+      <h4 class="card-title">{{contacts.first_name}} {{contacts.name}}</h4>
+        <ul class="list-group">
+  <li class="list-group-item">Telephone: {{contacts.phone}}</li>
+  <li class="list-group-item">email: {{contacts.email}}</li>
+  <li class="list-group-item">date ajout: {{contacts.date_enregistrement}}</li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

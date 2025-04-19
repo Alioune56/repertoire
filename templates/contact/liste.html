@@ -1,0 +1,15 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    <br>
+    <h3 class="text-center">Liste des Contacts</h3>
+    {% if contacts %}
+    {% for contact in contacts %}
+    <ul class="list-group">
+      <li class="list-group-item"><a href="{% url 'details' contact.id %}">{{contact.first_name}} {{contact.name}}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        {% include 'contact/fixe/vide.html' %}
+    {% endif %}
+{% endblock %}
