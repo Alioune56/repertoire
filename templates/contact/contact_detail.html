@@ -7,8 +7,8 @@
       <h4 class="card-title">{{contacts.first_name}} {{contacts.name}}</h4>
         <ul class="list-group">
   <li class="list-group-item">Telephone: {{contacts.phone}}</li>
-  <li class="list-group-item">email: {{contacts.email}}</li>
-  <li class="list-group-item">date ajout: {{contacts.date_enregistrement}}</li>
+  <li class="list-group-item">email: {{contacts.email | default_if_none:"non renseigné"}}</li>
+  <li class="list-group-item">date ajout: {{contacts.date_enregistrement | date:"d-m-y" }}</li>
 </ul>
 
     </div>
